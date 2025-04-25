@@ -57,15 +57,22 @@ public class DatosFragment extends Fragment {
         try {
             JSONObject user = new JSONObject(userDataStr);
 
-            String info = "Nombre: " + user.getString("nombres") + " " + user.getString("apellidos") + "\n"
-                    + "Edad: " + user.getString("edad") + " años\n"
-                    + "Correo institucional: " + user.getString("correo") + "\n"
+            String nombres = user.optString("nombres", "Desconocido");
+            String apellidos = user.optString("apellidos", "Desconocido");
+            String correo = user.optString("correo", "Desconocido");
+            String edad = user.optString("edad", "No registrada");
+            String semestre = user.optString("semestre", "No registrado");
+
+            String info = "Nombre: " + nombres + " " + apellidos + "\n"
+                    + "Edad: " + edad + " años\n"
+                    + "Correo institucional: " + correo + "\n"
                     + "Programa: Desarrollo de Aplicaciones Móviles Nativas\n"
-                    + "Semestre: " + user.getString("semestre");
+                    + "Semestre: " + semestre;
 
             txtContenido.setText(info);
+
         } catch (Exception e) {
-            txtContenido.setText("Error leyendo datos");
+            txtContenido.setText("Error leyendo datos del usuario");
         }
 
         btnCerrarSesion.setOnClickListener(v -> {
