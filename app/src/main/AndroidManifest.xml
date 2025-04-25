@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ucompensar.parcial">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ParcialAppMovil"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ParcialAppMovil">
+
+        <!-- SplashScreen como launcher -->
+        <activity
+            android:name=".activities.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activities -->
+        <activity android:name=".activities.ComienzaActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.RecoverActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.InventoryActivity" />
+        <activity android:name=".activities.MainFragmentHostActivity" />
+    </application>
+</manifest>

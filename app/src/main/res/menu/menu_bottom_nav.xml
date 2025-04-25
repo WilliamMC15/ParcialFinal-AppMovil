@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/datosFragment"
+        android:icon="@drawable/ic_user"
+        android:title="Mis Datos" />
+
+    <item
+        android:id="@+id/analisisFragment"
+        android:icon="@drawable/ic_key"
+        android:title="Análisis" />
+
+    <item
+        android:id="@+id/historicoFragment"
+        android:icon="@drawable/ic_google"
+        android:title="Histórico" />
+</menu>

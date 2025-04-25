@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/datosFragment">
+
+    <fragment
+        android:id="@+id/datosFragment"
+        android:name="com.ucompensar.parcial.fragments.DatosFragment"
+        android:label="Mis Datos" />
+    <fragment
+        android:id="@+id/analisisFragment"
+        android:name="com.ucompensar.parcial.fragments.AnalisisFragment"
+        android:label="Análisis" />
+    <fragment
+        android:id="@+id/historicoFragment"
+        android:name="com.ucompensar.parcial.fragments.HistoricoFragment"
+        android:label="Histórico" />
+</navigation>
